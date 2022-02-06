@@ -96,12 +96,13 @@ class _AuthOnboarding1WidgetState extends State<AuthOnboarding1Widget>
                                   Expanded(
                                     child: FFButtonWidget(
                                       onPressed: () async {
-                                        await Navigator.push(
+                                        await Navigator.pushAndRemoveUntil(
                                           context,
                                           MaterialPageRoute(
                                             builder: (context) =>
                                                 AuthPhone2Widget(),
                                           ),
+                                          (r) => false,
                                         );
                                       },
                                       text: 'GET STARTED',

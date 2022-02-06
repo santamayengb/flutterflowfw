@@ -2,7 +2,7 @@ import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../setup_5/setup5_widget.dart';
+import '../restaurant_profile_page/restaurant_profile_page_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -231,11 +231,12 @@ class _OwnerRegistration4WidgetState extends State<OwnerRegistration4Widget> {
                   padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
                   child: FFButtonWidget(
                     onPressed: () async {
-                      await Navigator.push(
+                      await Navigator.pushAndRemoveUntil(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Setup5Widget(),
+                          builder: (context) => RestaurantProfilePageWidget(),
                         ),
+                        (r) => false,
                       );
                     },
                     text: 'Resgister',
